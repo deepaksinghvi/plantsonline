@@ -5,10 +5,10 @@ docker-compose up --build -d
 url: http://localhost:5000
 
 ## pgadmin
-url: http://localhost:5050/
+url: http://localhost:5050/  
 username/password:pgadmin4@pgadmin.org/admin
 
 ## postgres
-username/password:postgres/changeme
+username/password:postgres/changeme  
 dbname:postgres
 
