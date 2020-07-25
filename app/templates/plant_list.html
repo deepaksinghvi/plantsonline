@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Available Plants{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <h1>Plants List</h1>
+  <table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Image</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for plant in plants %}
+    <tr>
+    <td>{{ plant.name }}</td>
+    <td><img src={{ plant.imageurl }}></td></td>
+    </tr>
+  {% endfor %}
+</table>
+<p class="navbar-btn">
+  <a href="/addplant" class="btn btn-default">Add Plant</a>
+</p>
+{% endblock %}

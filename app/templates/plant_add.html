@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Add Plant{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <h1>Add Plant</h1>
+  <form action="/addplant" method="POST">
+    <div class="form-group">
+    <label for="namefield">Name</label>
+    <input type="text" class="form-control" id="namefield" name="name" aria-describedby="emailHelp" placeholder="Name">
+    <small id="emailHelp" class="form-text text-muted">Name of the plan.</small>
+  </div>
+  <div class="form-group">
+    <label for="namefield">Image URL</label>
+    <input type="text" class="form-control" id="imageurlfield" name="imageurl" aria-describedby="emailHelp" placeholder="ImageUrl">
+    <small id="emailHelp" class="form-text text-muted">Absolute image url.</small>
+  </div>
+  <button type="submit" class="btn btn-default">Add</button>
+  </form>
+{% endblock %}
