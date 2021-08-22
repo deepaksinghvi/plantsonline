@@ -91,3 +91,16 @@ def add_plant():
 
     plants = Plants.query.all()
     return render_template('plant_list.html', plants=plants)
+
+@app.route('/addplanttest3', methods=['POST'])
+def add_plant():
+    from models import Plants
+    name = request.form.get('name')
+    imageurl = request.form.get('imageurl')
+
+    plant = Plants(name, imageurl)
+    db.session.add(plant)
+    db.session.commit()
+
+    plants = Plants.query.all()
+    return render_template('plant_list.html', plants=plants)
